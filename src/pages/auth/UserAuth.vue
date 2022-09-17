@@ -86,9 +86,9 @@ export default {
           await store.dispatch('signup', actionPayload);
         }
 
-        // const redirectURL = '/' + (this.$route.query.redirect || 'coaches');
-        // this.$router.replace(redirectURL);
-        router.replace('/coaches');
+        const redirectURL = '/' + (this.$route.query.redirect || 'coaches');
+        this.$router.replace(redirectURL);
+        // router.replace('/coaches');
       } catch (error) {
         error.value = error.message || 'failed to authenticated , try later .';
       }
